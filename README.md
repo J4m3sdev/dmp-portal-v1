@@ -8,7 +8,7 @@ Password-gated landing page for **The Disciple-Making Parent** content tool. Rou
 
 ## Team password
 
-**`passingthebaton`**
+The portal is gated by a SHA-256 hashed password (see the `HASH` constant in `index.html`). The plaintext password is documented in Modulus internal docs only — do **not** add it to this repo.
 
 To change the password:
 
@@ -16,7 +16,7 @@ To change the password:
 echo -n "yournewpassword" | shasum -a 256
 ```
 
-Then replace the `HASH` constant inside the `<script>` tag near the bottom of `index.html`.
+Then replace the `HASH` constant inside the `<script>` tag near the bottom of `index.html`. Users will need to re-enter the new password (the old localStorage entry stays valid until the storage key version is bumped — see `STORAGE_KEY` in the gate JS).
 
 ## Brand
 
