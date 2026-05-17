@@ -6,6 +6,16 @@ Password-gated landing page for **The Disciple-Making Parent** content tool. Rou
 
 `https://j4m3sdev.github.io/dmp-portal-v1/`
 
+## Versioning
+
+Every push bumps the visible version (`v1.0` &rarr; `v1.1` &rarr; `v1.2`...). The version string appears in three places in `index.html`:
+
+- Topline (very top of every page): `Content Tool &middot; vX.Y`
+- Header meta (right of brand-mark): `vX.Y &middot; private team tool`
+- Footer brand-sub: `Content Tool &middot; vX.Y`
+
+When pushing an update, search-and-replace all three before committing. Commit message format: `vX.Y: short description of change`.
+
 ## Team password
 
 The portal is gated by a SHA-256 hashed password (see the `HASH` constant in `index.html`). The plaintext password is documented in Modulus internal docs only — do **not** add it to this repo.

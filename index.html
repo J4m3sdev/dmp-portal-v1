@@ -103,10 +103,12 @@ img { max-width: 100%; height: auto; display: block; }
 .auth-mark {
   width: 64px;
   height: 64px;
-  background: var(--navy-darkest);
+  background: var(--white);
   border-radius: 50%;
   margin: 0 auto 22px;
-  padding: 8px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(15,30,46,.18), inset 0 0 0 1px var(--rule);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,7 +236,8 @@ img { max-width: 100%; height: auto; display: block; }
 .brand-mark {
   width: 52px;
   height: 52px;
-  background: var(--navy-darkest);
+  background: var(--white);
+  overflow: hidden;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -243,7 +246,7 @@ img { max-width: 100%; height: auto; display: block; }
   transition: background .25s var(--ease), transform .25s var(--ease-out);
   padding: 5px;
 }
-.brand:hover .brand-mark { background: var(--navy); transform: rotate(-6deg); }
+.brand:hover .brand-mark { background: var(--white); transform: rotate(-6deg); box-shadow: 0 4px 14px rgba(15,30,46,.15); }
 .brand-mark img { width: 100%; height: 100%; object-fit: contain; }
 .brand-text { display: flex; flex-direction: column; gap: 3px; }
 .brand-name {
@@ -1139,7 +1142,7 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 880px) {
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
 }
-.footer-logo { width: 72px; height: 72px; margin-bottom: 22px; }
+.footer-logo { width: 72px; height: 72px; margin-bottom: 22px; background: var(--white); border-radius: 50%; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,.25); }
 .footer-logo img { width: 72px; height: 72px; object-fit: contain; }
 .footer-brand-name {
   font-family: var(--sans);
@@ -1599,7 +1602,7 @@ img { max-width: 100%; height: auto; display: block; }
   </div>
 </div>
 
-<div class="topline">The Disciple-Making Parent &middot; Content Tool &middot; v1.0</div>
+<div class="topline">The Disciple-Making Parent &middot; Content Tool &middot; v1.1</div>
 
 <header class="site-header">
   <div class="header-inner">
@@ -1610,7 +1613,7 @@ img { max-width: 100%; height: auto; display: block; }
         <div class="brand-sub">Content Tool</div>
       </div>
     </a>
-    <div class="header-meta">v1.0 &middot; private team tool</div>
+    <div class="header-meta">v1.1 &middot; private team tool</div>
   </div>
 </header>
 
@@ -1794,7 +1797,7 @@ img { max-width: 100%; height: auto; display: block; }
     <div>
       <div class="footer-logo"><img src="assets/dmp-logo-circle.jpg" alt="DMP"/></div>
       <div class="footer-brand-name">The Disciple-Making Parent</div>
-      <div class="footer-brand-sub">Content Tool &middot; v1.0</div>
+      <div class="footer-brand-sub">Content Tool &middot; v1.1</div>
       <p class="footer-desc">An internal content repurposing tool for DMP, built on the n8n + Pinecone stack. Source material stays in DMP's dedicated namespace.</p>
     </div>
     <div class="footer-links">
