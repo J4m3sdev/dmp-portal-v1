@@ -53,6 +53,7 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+html { height: 100%; }
 body {
   font-family: var(--sans);
   font-size: 16px;
@@ -61,6 +62,9 @@ body {
   background: var(--white);
   -webkit-font-smoothing: antialiased;
 }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+.site-footer { margin-top: auto; }
+.panel.active { flex: 1 0 auto; }
 a { color: var(--navy); text-decoration: none; transition: color .2s var(--ease); }
 a:hover { color: var(--navy-bright); }
 img { max-width: 100%; height: auto; display: block; }
@@ -1602,7 +1606,7 @@ img { max-width: 100%; height: auto; display: block; }
   </div>
 </div>
 
-<div class="topline">The Disciple-Making Parent &middot; Content Tool &middot; v1.1</div>
+<div class="topline">The Disciple-Making Parent &middot; Content Tool &middot; v1.2</div>
 
 <header class="site-header">
   <div class="header-inner">
@@ -1613,7 +1617,7 @@ img { max-width: 100%; height: auto; display: block; }
         <div class="brand-sub">Content Tool</div>
       </div>
     </a>
-    <div class="header-meta">v1.1 &middot; private team tool</div>
+    <div class="header-meta">v1.2 &middot; private team tool</div>
   </div>
 </header>
 
@@ -1797,7 +1801,7 @@ img { max-width: 100%; height: auto; display: block; }
     <div>
       <div class="footer-logo"><img src="assets/dmp-logo-circle.jpg" alt="DMP"/></div>
       <div class="footer-brand-name">The Disciple-Making Parent</div>
-      <div class="footer-brand-sub">Content Tool &middot; v1.1</div>
+      <div class="footer-brand-sub">Content Tool &middot; v1.2</div>
       <p class="footer-desc">An internal content repurposing tool for DMP, built on the n8n + Pinecone stack. Source material stays in DMP's dedicated namespace.</p>
     </div>
     <div class="footer-links">
