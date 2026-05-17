@@ -1585,7 +1585,58 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 
-/* === STICKY FOOTER (v1.6) === */
+/* === COMING-SOON PILLAR (v1.7) === */
+.pillar.coming-soon {
+  opacity: 0.7;
+  filter: saturate(0.35);
+  background: var(--off-white);
+  position: relative;
+}
+.pillar.coming-soon::before {
+  content: 'COMING SOON';
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--ink-muted);
+  padding: 4px 10px;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+.pillar.coming-soon .pillar-icon {
+  color: var(--ink-muted);
+  background: rgba(15,30,46,0.04);
+}
+.pillar.coming-soon .pillar-title,
+.pillar.coming-soon .pillar-desc { color: var(--ink-muted); }
+.pillar-cta.pillar-cta-disabled {
+  color: var(--ink-muted);
+  font-style: italic;
+  font-weight: 500;
+  cursor: not-allowed;
+  text-decoration: line-through;
+  text-decoration-color: rgba(15,30,46,0.2);
+}
+.status-dot {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--ink-muted);
+  flex-shrink: 0;
+}
+.status-dot-muted {
+  background: #B0B7BF;
+  box-shadow: inset 0 0 0 1px rgba(15,30,46,0.1);
+}
+/* === END COMING-SOON PILLAR === */
+
+/* === STICKY FOOTER (v1.7) === */
 html { height: 100% !important; }
 body { min-height: 100vh !important; display: flex !important; flex-direction: column !important; }
 .panel.active { flex: 1 0 auto !important; min-height: 60vh !important; }
@@ -1611,7 +1662,7 @@ body { min-height: 100vh !important; display: flex !important; flex-direction: c
   </div>
 </div>
 
-<div class="topline">The Disciple-Making Parent &middot; Content Tool &middot; v1.6</div>
+<div class="topline">The Disciple-Making Parent &middot; Content Tool &middot; v1.7</div>
 
 <header class="site-header">
   <div class="header-inner">
@@ -1622,7 +1673,7 @@ body { min-height: 100vh !important; display: flex !important; flex-direction: c
         <div class="brand-sub">Content Tool</div>
       </div>
     </a>
-    <div class="header-meta">v1.6 &middot; private team tool</div>
+    <div class="header-meta">v1.7 &middot; private team tool</div>
   </div>
 </header>
 
@@ -1664,8 +1715,8 @@ body { min-height: 100vh !important; display: flex !important; flex-direction: c
   <div id="tools-section"></div>
 
   <div class="section-head" data-reveal>
-    <div class="section-eyebrow">Two Tools, One Workflow</div>
-    <h2 class="section-title">Upload. Generate. Iterate.</h2>
+    <div class="section-eyebrow">Three Tools, One Workflow</div>
+    <h2 class="section-title">Upload. Generate. Visualize.</h2>
     <p class="section-sub">Built on the DMP knowledge base. Every output traces back to your uploaded source material.</p>
   </div>
 
@@ -1686,6 +1737,14 @@ body { min-height: 100vh !important; display: flex !important; flex-direction: c
         <p class="pillar-desc">Pick a source, choose an output (Q&amp;A, article, key quotes, or social posts), and let the AI produce faithful, scripture-grounded text in DMP's voice.</p>
         <a class="pillar-cta" href="https://modulusai.app.n8n.cloud/form/1d0a8d19-ae42-40f2-a3e4-3f2ff235bbd8" target="_blank" rel="noopener" id="btn-generate">Open Generator &rarr;</a>
         <div class="pillar-footer"><span class="pulse-dot"></span> Form active</div>
+      </div>
+      <div class="pillar coming-soon" aria-disabled="true">
+        <div class="pillar-step">Step 03</div>
+        <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+        <h3 class="pillar-title">Make a Graphic</h3>
+        <p class="pillar-desc">Drop a verse or pull-quote into the graphic generator and produce a polished image for Instagram, Facebook, or the blog. Export as PNG or JPG.</p>
+        <span class="pillar-cta pillar-cta-disabled">Not yet available</span>
+        <div class="pillar-footer"><span class="status-dot status-dot-muted"></span> Coming soon</div>
       </div>
       
     </div>
@@ -1806,7 +1865,7 @@ body { min-height: 100vh !important; display: flex !important; flex-direction: c
     <div>
       <div class="footer-logo"><img src="assets/dmp-logo-circle.jpg" alt="DMP"/></div>
       <div class="footer-brand-name">The Disciple-Making Parent</div>
-      <div class="footer-brand-sub">Content Tool &middot; v1.6</div>
+      <div class="footer-brand-sub">Content Tool &middot; v1.7</div>
       <p class="footer-desc">An internal content repurposing tool for DMP, built on the n8n + Pinecone stack. Source material stays in DMP's dedicated namespace.</p>
     </div>
     <div class="footer-links">
